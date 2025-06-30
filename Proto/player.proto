@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package game.player;
+
+// 玩家基础信息
+message Player {
+  int32 id = 1;          // 玩家ID
+  string name = 2;       // 角色名
+  uint32 level = 3;      // 等级
+  Position position = 4; // 坐标
+}
+
+// 坐标信息（可独立为position.proto）
+message Position {
+  float x = 1;
+  float y = 2;
+  float z = 3;
+}
