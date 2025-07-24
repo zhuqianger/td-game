@@ -353,13 +353,6 @@ namespace TDGame.Stage
             Debug.Log($"关卡完成: {stage.config.stageName}");
         }
         
-        private void OnStageFailed(Stage stage)
-        {
-            isStageActive = false;
-            OnStageFailed?.Invoke(stage);
-            
-            Debug.Log($"关卡失败: {stage.config.stageName}");
-        }
         
         private void OnLifePointsChanged(int lifePoints)
         {

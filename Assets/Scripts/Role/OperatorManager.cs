@@ -54,12 +54,6 @@ namespace TDGame.Role
                     continue;
                 }
                 
-                // 更新技能
-                foreach (var skill in op.skills)
-                {
-                    skill.Update(Time.deltaTime);
-                }
-                
                 // 更新天赋
                 foreach (var talent in op.talents)
                 {

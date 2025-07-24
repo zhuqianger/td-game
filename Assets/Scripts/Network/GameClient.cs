@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using System;
 using System.Text;
 using System.Collections.Generic;
-using Battle.Models;
 
 namespace Network
 {
@@ -153,7 +152,6 @@ namespace Network
         
 
 			string json = Encoding.UTF8.GetString(buffer);
-            var matchData = JsonUtility.FromJson<GameMatchData>(json);
             // 处理消息
             Debug.Log($"收到消息ID: {messageId}, 内容: {json}");
             

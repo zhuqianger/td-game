@@ -655,19 +655,5 @@ namespace TDGame.Stage
             totalEnemiesKilled++;
             OnEnemyKilled?.Invoke(enemy);
         }
-        
-        private void OnEnemyLeaked(Enemy enemy)
-        {
-            activeEnemies.Remove(enemy);
-            totalEnemiesLeaked++;
-            OnEnemyLeaked?.Invoke(enemy);
-            
-            // 通知关卡管理器
-            var stage = FindObjectOfType<Stage>();
-            if (stage != null)
-            {
-                stage.EnemyLeaked();
-            }
-        }
     }
 } 

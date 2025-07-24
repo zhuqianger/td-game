@@ -15,7 +15,6 @@ namespace Network
         [SerializeField] private InputField messageInput;
         [SerializeField] private Text logText;
         [SerializeField] private Text connectionStatusText;
-
         [Header("Test Settings")]
         [SerializeField] private int testMessageId = 2001;
         [SerializeField] private string serverIp = "127.0.0.1";

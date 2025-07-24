@@ -82,24 +82,6 @@ namespace TDGame.Role
         }
         
         /// <summary>
-        /// 更新技能状态
-        /// </summary>
-        public void Update(float deltaTime)
-        {
-            // 更新技力
-            if (isActive)
-            {
-                currentSp += spRecovery * deltaTime;
-            }
-            
-            // 检查持续时间
-            if (isActive && Time.time - activeStartTime >= duration)
-            {
-                Deactivate();
-            }
-        }
-        
-        /// <summary>
         /// 尝试使用技能
         /// </summary>
         public bool TryUse(Operator caster)
