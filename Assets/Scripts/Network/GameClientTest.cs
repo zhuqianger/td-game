@@ -48,7 +48,7 @@ namespace Network
         {
             try
             {
-                await GameClient.Instance.ConnectToServer("1","12345",serverIp, serverPort);
+                await GameClient.Instance.ConnectToServer("1","123456",serverIp, serverPort);
                 UpdateConnectionStatus();
                 AddLog($"正在连接服务器 {serverIp}:{serverPort}...");
             }
