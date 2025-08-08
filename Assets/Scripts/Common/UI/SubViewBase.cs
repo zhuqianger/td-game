@@ -3,16 +3,16 @@ using UnityEngine;
 namespace Common.UI
 {
     /// <summary>
-    /// 子窗口基类 - 被主窗口管理的子窗口
+    /// 子窗口基类 - 可以被主窗口或其他子窗口管理的子窗口
     /// </summary>
     public abstract class SubViewBase : UIBase
     {
         [Header("子窗口配置")]
         [SerializeField] protected bool autoInit = true; // 是否自动初始化
 
-        protected WndBase parentWindow; // 父窗口引用
-
-        public WndBase ParentWindow => parentWindow;
+        protected UIBase parentWindow; // 父窗口引用（可以是主窗口或子窗口）
+        
+        public UIBase ParentWindow => parentWindow;
 
         protected override void Awake()
         {
@@ -27,15 +27,24 @@ namespace Common.UI
         /// </summary>
         protected virtual void FindParentWindow()
         {
-            // 向上查找父窗口
+            // 向上查找父窗口（可以是主窗口或子窗口）
             Transform parent = transform.parent;
             while (parent != null)
             {
+                // 优先查找主窗口
                 parentWindow = parent.GetComponent<WndBase>();
                 if (parentWindow != null)
                 {
                     break;
                 }
+                
+                // 如果没有找到主窗口，查找子窗口
+                parentWindow = parent.GetComponent<SubViewBase>();
+                if (parentWindow != null)
+                {
+                    break;
+                }
+                
                 parent = parent.parent;
             }
         }
@@ -43,8 +52,8 @@ namespace Common.UI
         /// <summary>
         /// 设置父窗口引用
         /// </summary>
-        /// <param name="window">父窗口</param>
-        public virtual void SetParentWindow(WndBase window)
+        /// <param name="window">父窗口（可以是主窗口或子窗口）</param>
+        public virtual void SetParentWindow(UIBase window)
         {
             parentWindow = window;
         }
@@ -183,6 +192,56 @@ namespace Common.UI
             {
                 parentWindow.UnregisterEvent(eventName, callback);
             }
+        }
+
+        /// <summary>
+        /// 获取根窗口（最顶层的窗口）
+        /// </summary>
+        /// <returns>根窗口</returns>
+        protected WndBase GetRootWindow()
+        {
+            if (parentWindow == null)
+            {
+                return null;
+            }
+
+            // 如果父窗口是主窗口，直接返回
+            if (parentWindow is WndBase wndBase)
+            {
+                return wndBase;
+            }
+
+            // 如果父窗口是子窗口，递归查找根窗口
+            if (parentWindow is SubViewBase subView)
+            {
+                return subView.GetRootWindow();
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// 获取窗口层级深度
+        /// </summary>
+        /// <returns>层级深度（0为根窗口）</returns>
+        protected int GetWindowDepth()
+        {
+            if (parentWindow == null)
+            {
+                return 0;
+            }
+
+            if (parentWindow is WndBase)
+            {
+                return 1;
+            }
+
+            if (parentWindow is SubViewBase subView)
+            {
+                return subView.GetWindowDepth() + 1;
+            }
+
+            return 0;
         }
 
         #endregion
