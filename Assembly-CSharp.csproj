@@ -47,14 +47,18 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Role\Skill.cs" />
     <Compile Include="Assets\Scripts\Role\OperatorFactory.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\SubViewBase.cs" />
     <Compile Include="Assets\Scripts\Role\OperatorUI.cs" />
     <Compile Include="Assets\Scripts\Network\GameClientTest.cs" />
     <Compile Include="Assets\Scripts\Task\ExampleTasks.cs" />
     <Compile Include="Assets\Scripts\Role\OperatorPrefabSetup.cs" />
     <Compile Include="Assets\Scripts\Task\TaskSystemTest.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\UIManager.cs" />
     <Compile Include="Assets\Scripts\Role\OperatorManager.cs" />
     <Compile Include="Assets\Scripts\Task\TaskManager.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\WndBase.cs" />
     <Compile Include="Assets\Scripts\Stage\TerrainManager.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\UIItemBase.cs" />
     <Compile Include="Assets\Scripts\Task\Task.cs" />
     <Compile Include="Assets\Scripts\Stage\StageUI.cs" />
     <Compile Include="Assets\Scripts\Stage\StageManager.cs" />
@@ -64,6 +68,8 @@
     <Compile Include="Assets\Scripts\Role\OperatorSystemTest.cs" />
     <Compile Include="Assets\Scripts\Task\TaskUI.cs" />
     <Compile Include="Assets\Scripts\Network\GameClient.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\UIHelper.cs" />
+    <Compile Include="Assets\Scripts\Common\UI\UIBase.cs" />
     <Compile Include="Assets\Scripts\Stage\ExampleStages.cs" />
     <Compile Include="Assets\Scripts\Stage\WeatherManager.cs" />
     <Compile Include="Assets\Scripts\Role\Talent.cs" />
