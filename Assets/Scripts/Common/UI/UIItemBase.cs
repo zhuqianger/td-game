@@ -10,7 +10,7 @@ namespace Common.UI
         [Header("UI项配置")]
         [SerializeField] protected bool autoInit = false; // UI项通常不自动初始化
         [SerializeField] protected bool usePool = true; // 是否使用对象池
-
+        
         protected int itemIndex = -1; // 在列表中的索引
         protected object itemData; // 项数据
 

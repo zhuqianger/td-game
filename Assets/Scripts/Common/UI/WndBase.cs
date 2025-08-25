@@ -20,7 +20,7 @@ namespace Common.UI
         [SerializeField] protected Color inactiveTextColor = Color.gray;
 
         // 页签管理
-        protected Dictionary<string, TabInfo> tabs = new Dictionary<string, TabInfo>();
+        protected Dictionary<string, object> tabs = new Dictionary<string, object>();
         protected string currentTab = "";
 
         // 子窗口管理
@@ -67,8 +67,7 @@ namespace Common.UI
                     string tabName = tabChild.name;
                     
                     // 页签名称应该与对应的子窗口名称一致
-                    TabInfo tabInfo = new TabInfo(tabName, tabButton, tabName);
-                    tabs[tabName] = tabInfo;
+                    tabs[tabName] = new object();
                     
                     // 设置按钮点击事件
                     string capturedTabName = tabName; // 闭包捕获
@@ -122,19 +121,6 @@ namespace Common.UI
                 return;
             }
 
-            // 关闭当前页签
-            if (!string.IsNullOrEmpty(currentTab) && tabs.ContainsKey(currentTab))
-            {
-                CloseTab(currentTab);
-            }
-
-            // 打开新页签
-            TabInfo tabInfo = tabs[tabName];
-            tabInfo.isActive = true;
-            
-            // 更新按钮状态
-            UpdateTabButtonState(tabInfo, true);
-
             currentTab = tabName;
             
             // 切换到对应的子窗口
@@ -145,32 +131,6 @@ namespace Common.UI
             
             // 调用子类方法
             OnTabSwitched(tabName);
-        }
-
-        /// <summary>
-        /// 关闭页签
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        public virtual void CloseTab(string tabName)
-        {
-            if (!hasTabs || !tabs.ContainsKey(tabName))
-            {
-                return;
-            }
-
-            TabInfo tabInfo = tabs[tabName];
-            if (tabInfo.isActive)
-            {
-                tabInfo.isActive = false;
-                
-                // 更新按钮状态
-                UpdateTabButtonState(tabInfo, false);
-            }
-
-            if (currentTab == tabName)
-            {
-                currentTab = "";
-            }
         }
 
         /// <summary>
@@ -251,130 +211,10 @@ namespace Common.UI
             return new List<string>(subViews.Keys);
         }
 
-        /// <summary>
-        /// 更新页签按钮状态
-        /// </summary>
-        /// <param name="tabInfo">页签信息</param>
-        /// <param name="isActive">是否激活</param>
-        protected virtual void UpdateTabButtonState(TabInfo tabInfo, bool isActive)
-        {
-            if (tabInfo.tabIcon != null)
-            {
-                tabInfo.tabIcon.color = isActive ? activeTabColor : inactiveTabColor;
-            }
-            
-            if (tabInfo.tabText != null)
-            {
-                tabInfo.tabText.color = isActive ? activeTextColor : inactiveTextColor;
-            }
-        }
-
-        /// <summary>
-        /// 获取页签
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        /// <returns>页签信息</returns>
-        public TabInfo GetTab(string tabName)
-        {
-            return tabs.ContainsKey(tabName) ? tabs[tabName] : null;
-        }
-
-        /// <summary>
-        /// 获取当前页签
-        /// </summary>
-        /// <returns>当前页签信息</returns>
-        public TabInfo GetCurrentTab()
-        {
-            return !string.IsNullOrEmpty(currentTab) ? tabs[currentTab] : null;
-        }
-
-        /// <summary>
-        /// 检查页签是否激活
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        /// <returns>是否激活</returns>
-        public bool IsTabActive(string tabName)
-        {
-            return tabs.ContainsKey(tabName) && tabs[tabName].isActive;
-        }
-
-        /// <summary>
-        /// 获取所有页签名称
-        /// </summary>
-        /// <returns>页签名称列表</returns>
-        public List<string> GetAllTabNames()
-        {
-            return new List<string>(tabs.Keys);
-        }
-
-        /// <summary>
-        /// 设置页签文本
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        /// <param name="text">文本内容</param>
-        public void SetTabText(string tabName, string text)
-        {
-            if (tabs.ContainsKey(tabName) && tabs[tabName].tabText != null)
-            {
-                tabs[tabName].tabText.text = text;
-            }
-        }
-
-        /// <summary>
-        /// 设置页签图标
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        /// <param name="sprite">图标精灵</param>
-        public void SetTabIcon(string tabName, Sprite sprite)
-        {
-            if (tabs.ContainsKey(tabName) && tabs[tabName].tabIcon != null)
-            {
-                tabs[tabName].tabIcon.sprite = sprite;
-            }
-        }
-
-        /// <summary>
-        /// 启用/禁用页签
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        /// <param name="enabled">是否启用</param>
-        public void SetTabEnabled(string tabName, bool enabled)
-        {
-            if (tabs.ContainsKey(tabName))
-            {
-                tabs[tabName].tabButton.interactable = enabled;
-            }
-        }
-
-        /// <summary>
-        /// 显示/隐藏页签
-        /// </summary>
-        /// <param name="tabName">页签名称</param>
-        /// <param name="visible">是否可见</param>
-        public void SetTabVisible(string tabName, bool visible)
-        {
-            if (tabs.ContainsKey(tabName))
-            {
-                tabs[tabName].tabButton.gameObject.SetActive(visible);
-            }
-        }
-
         protected override void OnClose()
         {
             // 关闭当前子窗口
             CloseCurrentSubView();
-
-            // 关闭所有页签
-            if (hasTabs)
-            {
-                foreach (var tab in tabs.Values)
-                {
-                    if (tab.isActive)
-                    {
-                        CloseTab(tab.tabName);
-                    }
-                }
-            }
 
             base.OnClose();
         }
@@ -384,13 +224,6 @@ namespace Common.UI
             // 清理页签按钮事件
             if (hasTabs)
             {
-                foreach (var tab in tabs.Values)
-                {
-                    if (tab.tabButton != null)
-                    {
-                        tab.tabButton.onClick.RemoveAllListeners();
-                    }
-                }
                 tabs.Clear();
             }
 

@@ -86,7 +86,7 @@ namespace Common.UI
             
             if (useAnimation)
             {
-                PlayOpenAnimation();
+                
             }
             
             isOpened = true;
@@ -101,11 +101,7 @@ namespace Common.UI
 
             if (useAnimation)
             {
-                PlayCloseAnimation(() => {
-                    OnClose();
-                    gameObject.SetActive(false);
-                    isOpened = false;
-                });
+                
             }
             else
             {

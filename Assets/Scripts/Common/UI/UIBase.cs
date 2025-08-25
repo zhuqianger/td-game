@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using Common.UI;
 
 namespace Common.UI
 {
@@ -49,7 +50,7 @@ namespace Common.UI
         protected string currentSubview = "";
         
         // 事件系统
-        protected UIEventManager eventManager;
+        public UIEventManager eventManager;
         
         // UI状态
         protected bool isInitialized = false;
@@ -254,7 +255,7 @@ namespace Common.UI
             
             if (useAnimation)
             {
-                PlayOpenAnimation();
+                //todo 动画效果 
             }
             
             isOpened = true;
@@ -281,11 +282,12 @@ namespace Common.UI
 
             if (useAnimation)
             {
-                PlayCloseAnimation(() => {
-                    OnClose();
-                    gameObject.SetActive(false);
-                    isOpened = false;
-                });
+                // PlayCloseAnimation(() => {
+                //     OnClose();
+                //     gameObject.SetActive(false);
+                //     isOpened = false;
+                // });
+                //关闭时的动画效果
             }
             else
             {
@@ -408,18 +410,18 @@ namespace Common.UI
         /// <typeparam name="T">事件数据类型</typeparam>
         /// <param name="eventName">事件名称</param>
         /// <param name="callback">回调函数</param>
-        protected void RegisterEvent<T>(string eventName, Action<T> callback)
+        public void RegisterEvent<T>(string eventName, Action<T> callback)
         {
             eventManager.Register(eventName, callback);
         }
-
+        
         /// <summary>
         /// 注销事件
         /// </summary>
         /// <typeparam name="T">事件数据类型</typeparam>
         /// <param name="eventName">事件名称</param>
         /// <param name="callback">回调函数</param>
-        protected void UnregisterEvent<T>(string eventName, Action<T> callback)
+        public void UnregisterEvent<T>(string eventName, Action<T> callback)
         {
             eventManager.Unregister(eventName, callback);
         }
@@ -430,36 +432,9 @@ namespace Common.UI
         /// <typeparam name="T">事件数据类型</typeparam>
         /// <param name="eventName">事件名称</param>
         /// <param name="data">事件数据</param>
-        protected void SendEvent<T>(string eventName, T data)
+        public void SendEvent<T>(string eventName, T data)
         {
             eventManager.Send(eventName, data);
-        }
-
-        #endregion
-
-        #region 动画系统
-
-        /// <summary>
-        /// 播放打开动画
-        /// </summary>
-        protected virtual void PlayOpenAnimation()
-        {
-            // 默认缩放动画
-            transform.localScale = Vector3.zero;
-            LeanTween.scale(gameObject, Vector3.one, 0.3f).setEaseOutBack();
-        }
-
-        /// <summary>
-        /// 播放关闭动画
-        /// </summary>
-        /// <param name="onComplete">完成回调</param>
-        protected virtual void PlayCloseAnimation(Action onComplete = null)
-        {
-            // 默认缩放动画
-            LeanTween.scale(gameObject, Vector3.zero, 0.2f).setEaseInBack()
-                .setOnComplete(() => {
-                    onComplete?.Invoke();
-                });
         }
 
         #endregion
