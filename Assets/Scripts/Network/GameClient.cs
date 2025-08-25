@@ -133,6 +133,7 @@ namespace Network
                 }
                 catch (Exception e)
                 {
+                    Debug.LogError($"接收消息时发生错误: {e.Message}");
                     break;
                 }
             }
@@ -150,16 +151,12 @@ namespace Network
             byte[] payload = new byte[messageLength];
             Array.Copy(buffer, 8, payload, 0, messageLength);
         
-
-			string json = Encoding.UTF8.GetString(buffer);
+            string json = Encoding.UTF8.GetString(payload);
             // 处理消息
             Debug.Log($"收到消息ID: {messageId}, 内容: {json}");
             
-            // 调用注册的消息处理器
-            if (messageHandlers.TryGetValue(messageId, out Action<byte[]> handler))
-            {
-                handler(payload);
-            }
+            // 将消息传递给 NetworkManager 处理
+            NetworkManager.HandleMessage(messageId, payload);
         }
 
         public async Task SendMessage(int messageId, byte[] payload)
