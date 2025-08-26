@@ -50,8 +50,8 @@ namespace Common.UI
         protected string currentSubview = "";
         
         // 事件系统
-        public UIEventManager eventManager;
-        
+        // 删除关于事件的内容
+
         // UI状态
         protected bool isInitialized = false;
         protected bool isOpened = false;
@@ -69,7 +69,7 @@ namespace Common.UI
 
         protected virtual void Awake()
         {
-            eventManager = new UIEventManager();
+            // 删除事件管理器的初始化
             CacheComponents();
             
             // 初始化子窗口
@@ -303,7 +303,7 @@ namespace Common.UI
         public virtual void Destroy()
         {
             OnDestroy();
-            eventManager.Clear();
+            // 删除事件清理
             componentCache.Clear();
             subviews.Clear();
         }
@@ -404,38 +404,7 @@ namespace Common.UI
 
         #region 事件系统
 
-        /// <summary>
-        /// 注册事件
-        /// </summary>
-        /// <typeparam name="T">事件数据类型</typeparam>
-        /// <param name="eventName">事件名称</param>
-        /// <param name="callback">回调函数</param>
-        public void RegisterEvent<T>(string eventName, Action<T> callback)
-        {
-            eventManager.Register(eventName, callback);
-        }
-        
-        /// <summary>
-        /// 注销事件
-        /// </summary>
-        /// <typeparam name="T">事件数据类型</typeparam>
-        /// <param name="eventName">事件名称</param>
-        /// <param name="callback">回调函数</param>
-        public void UnregisterEvent<T>(string eventName, Action<T> callback)
-        {
-            eventManager.Unregister(eventName, callback);
-        }
-
-        /// <summary>
-        /// 发送事件
-        /// </summary>
-        /// <typeparam name="T">事件数据类型</typeparam>
-        /// <param name="eventName">事件名称</param>
-        /// <param name="data">事件数据</param>
-        public void SendEvent<T>(string eventName, T data)
-        {
-            eventManager.Send(eventName, data);
-        }
+        // 删除整个事件系统部分
 
         #endregion
 

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System;
 
-namespace Common.UI
+namespace Common
 {
-    public class UIEventManager : MonoBehaviour
+    public static class EventManager
     {
-        private Dictionary<string, List<Delegate>> eventListeners = new Dictionary<string, List<Delegate>>();
+        private static Dictionary<string, List<Delegate>> eventListeners = new Dictionary<string, List<Delegate>>();
 
         /// <summary>
         /// 注册事件
@@ -14,7 +14,7 @@ namespace Common.UI
         /// <typeparam name="T">事件数据类型</typeparam>
         /// <param name="eventName">事件名称</param>
         /// <param name="callback">回调函数</param>
-        public void Register<T>(string eventName, Action<T> callback)
+        public static void Register<T>(string eventName, Action<T> callback)
         {
             if (!eventListeners.ContainsKey(eventName))
             {
@@ -28,7 +28,7 @@ namespace Common.UI
         /// </summary>
         /// <param name="eventName">事件名称</param>
         /// <param name="callback">回调函数</param>
-        public void Register(string eventName, Action callback)
+        public static void Register(string eventName, Action callback)
         {
             if (!eventListeners.ContainsKey(eventName))
             {
@@ -43,7 +43,7 @@ namespace Common.UI
         /// <typeparam name="T">事件数据类型</typeparam>
         /// <param name="eventName">事件名称</param>
         /// <param name="callback">回调函数</param>
-        public void Unregister<T>(string eventName, Action<T> callback)
+        public static void Unregister<T>(string eventName, Action<T> callback)
         {
             if (eventListeners.ContainsKey(eventName))
             {
@@ -60,7 +60,7 @@ namespace Common.UI
         /// </summary>
         /// <param name="eventName">事件名称</param>
         /// <param name="callback">回调函数</param>
-        public void Unregister(string eventName, Action callback)
+        public static void Unregister(string eventName, Action callback)
         {
             if (eventListeners.ContainsKey(eventName))
             {
@@ -78,7 +78,7 @@ namespace Common.UI
         /// <typeparam name="T">事件数据类型</typeparam>
         /// <param name="eventName">事件名称</param>
         /// <param name="data">事件数据</param>
-        public void Send<T>(string eventName, T data)
+        public static void Send<T>(string eventName, T data)
         {
             if (eventListeners.ContainsKey(eventName))
             {
@@ -96,7 +96,7 @@ namespace Common.UI
         /// 发送无参数事件
         /// </summary>
         /// <param name="eventName">事件名称</param>
-        public void Send(string eventName)
+        public static void Send(string eventName)
         {
             if (eventListeners.ContainsKey(eventName))
             {
@@ -113,7 +113,7 @@ namespace Common.UI
         /// <summary>
         /// 清除所有事件监听
         /// </summary>
-        public void Clear()
+        public static void Clear()
         {
             eventListeners.Clear();
         }

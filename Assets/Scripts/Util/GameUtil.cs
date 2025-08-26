@@ -16,6 +16,8 @@
             }
 
             string json = System.Text.Encoding.UTF8.GetString(data);
+            // 注意：JsonUtility.FromJson 支持反序列化复杂结构，包括 List<T> 和 Dictionary<string, T>，
+            // 只要这些类型是可序列化的。
             return UnityEngine.JsonUtility.FromJson<T>(json);
         }
     }

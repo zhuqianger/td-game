@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections.Generic;
 using Network;
+using Util;
 
 namespace Stage
 {
@@ -33,6 +35,8 @@ namespace Stage
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received player stages: {json}");
             // 处理获取玩家关卡的逻辑
+            List<Stage> stageList = GameUtil.Deserialize<List<Stage>>(data);
+            StageModel.OnStageListReceive(stageList);
         }
 
         private static void HandleSaveStageRecord(byte[] data)

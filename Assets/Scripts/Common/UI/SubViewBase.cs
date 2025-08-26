@@ -117,7 +117,6 @@ namespace Common.UI
         public override void Destroy()
         {
             OnDestroy();
-            eventManager.Clear();
             componentCache.Clear();
             parentWindow = null;
         }
@@ -158,7 +157,7 @@ namespace Common.UI
         {
             if (parentWindow != null)
             {
-                parentWindow.SendEvent(eventName, data);
+                // 删除事件发送
             }
         }
 
@@ -172,7 +171,7 @@ namespace Common.UI
         {
             if (parentWindow != null)
             {
-                parentWindow.RegisterEvent(eventName, callback);
+                // 删除事件注册
             }
         }
 
@@ -186,7 +185,7 @@ namespace Common.UI
         {
             if (parentWindow != null)
             {
-                parentWindow.UnregisterEvent(eventName, callback);
+                // 删除事件注销
             }
         }
 
