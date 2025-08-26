@@ -52,7 +52,7 @@ namespace Network
 
         private TcpClient client;
         private NetworkStream stream;
-        private string serverIp = "127.0.0.1"; // 服务器IP
+        private string serverIp = "1.117.63.144"; // 服务器IP
         private int serverPort = 8888;         // 服务器端口
 
         // 消息监听字典
