@@ -323,7 +323,7 @@ MonoBehaviour:
   logText: {fileID: 1485448107}
   connectionStatusText: {fileID: 1749887973}
   testMessageId: 1
-  serverIp: 1.117.63.144
+  serverIp: 127.0.0.1
   serverPort: 8888
 --- !u!114 &1485448107 stripped
 MonoBehaviour:

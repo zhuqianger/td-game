@@ -16,12 +16,6 @@
         REQ_UPDATE_PLAYER = 14,
         RESP_UPDATE_PLAYER = 15,
         
-        REQ_DELETE_PLAYER = 16,
-        RESP_DELETE_PLAYER = 17,
-        
-        REQ_GET_ALL_PLAYERS = 18,
-        RESP_GET_ALL_PLAYERS = 19,
-        
         // 干员相关
         REQ_GET_PLAYER_OPERATORS = 34,
         RESP_GET_PLAYER_OPERATORS = 35,
