@@ -59,22 +59,19 @@
         }
 
         // 以下是与背包相关的请求方法
-        public static void RequestGetBackpackItems(int playerId)
+        public static void RequestGetBackpackItems()
         {
-            Debug.Log($"Sending request to get backpack items for Player ID: {playerId}");
-            NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_BACKPACK, new { PlayerId = playerId });
+            NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_BACKPACK, null);
         }
 
-        public static void RequestUseItem(int playerId, int itemId, int quantity)
+        public static void RequestUseItem(int itemId, int quantity)
         {
-            Debug.Log($"Sending request to use item {itemId} with quantity {quantity} for player {playerId}");
-            NetworkManager.SendJsonMessage((int)MessageId.REQ_USE_ITEM, new { PlayerId = playerId, ItemId = itemId, Quantity = quantity });
+            NetworkManager.SendJsonMessage((int)MessageId.REQ_USE_ITEM, new {ItemId = itemId, Quantity = quantity });
         }
 
-        public static void RequestGetBackpackByType(int playerId, string type)
+        public static void RequestGetBackpackByType(string backpackTypeId)
         {
-            Debug.Log($"Sending request to get backpack items of type {type} for Player ID: {playerId}");
-            NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_BACKPACK_BY_TYPE, new { PlayerId = playerId, Type = type });
+            NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_BACKPACK_BY_TYPE, new { backpackTypeId = backpackTypeId });
         }
     }
 }
