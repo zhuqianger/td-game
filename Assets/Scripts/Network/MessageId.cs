@@ -26,9 +26,6 @@
         REQ_GET_PLAYER_OPERATORS = 34,
         RESP_GET_PLAYER_OPERATORS = 35,
         
-        REQ_ADD_PLAYER_OPERATOR = 36,
-        RESP_ADD_PLAYER_OPERATOR = 37,
-        
         REQ_LEVEL_UP_OPERATOR = 38,
         RESP_LEVEL_UP_OPERATOR = 39,
         
