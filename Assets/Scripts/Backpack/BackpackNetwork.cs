@@ -26,7 +26,6 @@
         {
             // 为每个消息ID注册处理器
             NetworkManager.RegisterMessageHandler((int)MessageId.RESP_GET_BACKPACK, HandleGetBackpackItems);
-            NetworkManager.RegisterMessageHandler((int)MessageId.RESP_ADD_ITEM, HandleAddItem);
             NetworkManager.RegisterMessageHandler((int)MessageId.RESP_USE_ITEM, HandleUseItem);
             NetworkManager.RegisterMessageHandler((int)MessageId.RESP_GET_BACKPACK_BY_TYPE, HandleGetBackpackByType);
         }
@@ -64,12 +63,6 @@
         {
             Debug.Log($"Sending request to get backpack items for Player ID: {playerId}");
             NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_BACKPACK, new { PlayerId = playerId });
-        }
-
-        public static void RequestAddItem(int playerId, int itemId, int quantity)
-        {
-            Debug.Log($"Sending request to add item {itemId} with quantity {quantity} to player {playerId}");
-            NetworkManager.SendJsonMessage((int)MessageId.REQ_ADD_ITEM, new { PlayerId = playerId, ItemId = itemId, Quantity = quantity });
         }
 
         public static void RequestUseItem(int playerId, int itemId, int quantity)

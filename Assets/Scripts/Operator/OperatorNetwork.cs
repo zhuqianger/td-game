@@ -91,7 +91,7 @@ namespace Operator
         public static void RequestGetPlayerOperators(int playerId)
         {
             Debug.Log($"Sending request to get player operators for Player ID: {playerId}");
-            NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_PLAYER_OPERATORS, new { PlayerId = playerId });
+            NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_PLAYER_OPERATORS, null);
         }
         
         public static void RequestAddPlayerOperator(int playerId, int operatorId)

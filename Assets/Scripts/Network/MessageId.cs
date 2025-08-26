@@ -23,7 +23,6 @@
         RESP_GET_ALL_PLAYERS = 19,
         
         // 干员相关
-        
         REQ_GET_PLAYER_OPERATORS = 34,
         RESP_GET_PLAYER_OPERATORS = 35,
         
@@ -52,9 +51,6 @@
         REQ_GET_BACKPACK_BY_TYPE = 62,
         RESP_GET_BACKPACK_BY_TYPE = 63,
         
-        REQ_ADD_ITEM = 64,
-        RESP_ADD_ITEM = 65,
-        
         REQ_USE_ITEM = 66,
         RESP_USE_ITEM = 67,
         
@@ -64,9 +60,6 @@
         
         REQ_SAVE_STAGE_RECORD = 86,
         RESP_SAVE_STAGE_RECORD = 87,
-        
-        REQ_CHECK_STAGE_PASSED = 88,
-        RESP_CHECK_STAGE_PASSED = 89,
         
         // 错误
         ERROR_MSG = -1
