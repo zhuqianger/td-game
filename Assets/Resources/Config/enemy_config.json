@@ -1,0 +1,38 @@
+[
+  {
+    "enemyId": 1001,
+    "enemyName": "普通敌人",
+    "enemyType": 1,
+    "hp": 500,
+    "attack": 100,
+    "defense": 50,
+    "magicResistance": 0,
+    "moveSpeed": 2.0,
+    "blockCount": 1,
+    "attackRange": [[0, 0], [1, 0]]
+  },
+  {
+    "enemyId": 1002,
+    "enemyName": "精英敌人",
+    "enemyType": 2,
+    "hp": 1200,
+    "attack": 200,
+    "defense": 100,
+    "magicResistance": 20,
+    "moveSpeed": 1.5,
+    "blockCount": 2,
+    "attackRange": [[0, 0], [1, 0]]
+  },
+  {
+    "enemyId": 1003,
+    "enemyName": "BOSS敌人",
+    "enemyType": 3,
+    "hp": 5000,
+    "attack": 400,
+    "defense": 200,
+    "magicResistance": 50,
+    "moveSpeed": 1.0,
+    "blockCount": 3,
+    "attackRange": [[0, 0], [1, 0], [2, 0], [1, 1], [1, -1]]
+  }
+]

@@ -1,0 +1,272 @@
+[
+  {
+    "id": 10010,
+    "operatorId": 1001,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10011,
+    "operatorId": 1001,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10012,
+    "operatorId": 1001,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10020,
+    "operatorId": 1002,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10021,
+    "operatorId": 1002,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10022,
+    "operatorId": 1002,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10030,
+    "operatorId": 1003,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10031,
+    "operatorId": 1003,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10032,
+    "operatorId": 1003,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10040,
+    "operatorId": 1004,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10041,
+    "operatorId": 1004,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10042,
+    "operatorId": 1004,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10050,
+    "operatorId": 1005,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10051,
+    "operatorId": 1005,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10052,
+    "operatorId": 1005,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10060,
+    "operatorId": 1006,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10061,
+    "operatorId": 1006,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10062,
+    "operatorId": 1006,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10070,
+    "operatorId": 1007,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10071,
+    "operatorId": 1007,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10072,
+    "operatorId": 1007,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10080,
+    "operatorId": 1008,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10081,
+    "operatorId": 1008,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10082,
+    "operatorId": 1008,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10090,
+    "operatorId": 1009,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10091,
+    "operatorId": 1009,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10092,
+    "operatorId": 1009,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  },
+  {
+    "id": 10100,
+    "operatorId": 1010,
+    "eliteLevel": 0,
+    "hpGrowthPerLevel": 100,
+    "attackGrowthPerLevel": 20,
+    "defenseGrowthPerLevel": 10,
+    "magicResistanceGrowthPerLevel": 5
+  },
+  {
+    "id": 10101,
+    "operatorId": 1010,
+    "eliteLevel": 1,
+    "hpGrowthPerLevel": 150,
+    "attackGrowthPerLevel": 30,
+    "defenseGrowthPerLevel": 15,
+    "magicResistanceGrowthPerLevel": 6
+  },
+  {
+    "id": 10102,
+    "operatorId": 1010,
+    "eliteLevel": 2,
+    "hpGrowthPerLevel": 200,
+    "attackGrowthPerLevel": 40,
+    "defenseGrowthPerLevel": 20,
+    "magicResistanceGrowthPerLevel": 7
+  }
+]

@@ -9,8 +9,8 @@ namespace Stage
     public static class StageNetwork
     {
         public static bool _isInitialized = false;
-
-        public static void Initialize()
+        
+        static StageNetwork()
         {
             if (!_isInitialized)
             {
@@ -20,7 +20,7 @@ namespace Stage
                 _isInitialized = true;
             }
         }
-
+        
         // 注册消息处理器
         private static void RegisterMessageHandlers()
         {
@@ -36,7 +36,7 @@ namespace Stage
             Debug.Log($"Received player stages: {json}");
             // 处理获取玩家关卡的逻辑
             List<Stage> stageList = GameUtil.Deserialize<List<Stage>>(data);
-            StageModel.OnStageListReceive(stageList);
+            StageModel.OnStageDataReceive(stageList);
         }
 
         private static void HandleSaveStageRecord(byte[] data)
@@ -44,19 +44,13 @@ namespace Stage
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received save stage record response: {json}");
             // 处理保存关卡记录的逻辑
+            Stage stage = GameUtil.Deserialize<Stage>(data);
+            StageModel.OnStageDataUpdate(stage);
         }
-
-        private static void HandleCheckStagePassed(byte[] data)
-        {
-            string json = System.Text.Encoding.UTF8.GetString(data);
-            Debug.Log($"Received check stage passed response: {json}");
-            // 处理检查关卡是否通过的逻辑
-        }
-
+        
         // 以下是与关卡相关的请求方法
-        public static void RequestGetPlayerStages(int playerId)
+        public static void RequestGetPlayerStages()
         {
-            Debug.Log($"Sending request to get player stages for Player ID: {playerId}");
             NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_PLAYER_STAGES,null);
         }
 

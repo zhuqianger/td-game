@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "材料背包",
+    "description": "存放各种材料道具的背包",
+    "sortOrder": 1
+  },
+  {
+    "id": 2,
+    "name": "货币背包",
+    "description": "存放各种货币的背包",
+    "sortOrder": 2
+  },
+  {
+    "id": 3,
+    "name": "装饰背包",
+    "description": "存放家具图纸等装饰道具的背包",
+    "sortOrder": 3
+  },
+  {
+    "id": 4,
+    "name": "皮肤背包",
+    "description": "存放干员皮肤等外观道具的背包",
+    "sortOrder": 4
+  },
+  {
+    "id": 5,
+    "name": "消耗品背包",
+    "description": "存放体力药剂等消耗品的背包",
+    "sortOrder": 5
+  },
+  {
+    "id": 6,
+    "name": "招募背包",
+    "description": "存放招募券等招募道具的背包",
+    "sortOrder": 6
+  }
+]

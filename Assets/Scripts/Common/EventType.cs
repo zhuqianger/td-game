@@ -3,6 +3,8 @@
     public static class EventType
     {
         //干员
-        public static string OnStageDataReceive = "OnStageDataReceive";
+        public static readonly string OnStageDataReceive = "OnStageDataReceive";
+        public static readonly string OnStageDataUpdate = "OnStageDataUpdate";
+
     }
 }

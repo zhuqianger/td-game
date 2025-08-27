@@ -1,0 +1,37 @@
+[
+  {
+    "id": 101,
+    "mapConfig": {
+      "entryPoints": [
+        { "id": 1, "position": [0, 0], "name": "入口1" },
+        { "id": 2, "position": [0, 5], "name": "入口2" }
+      ],
+      "targetPoint": { "position": [10, 3], "name": "目标点" }
+    },
+    "spawns": [
+      { "enemyId": 1001, "spawnTime": 0, "entryPointId": 1 },
+      { "enemyId": 1002, "spawnTime": 2, "entryPointId": 2 },
+      { "enemyId": 1001, "spawnTime": 5, "entryPointId": 1 },
+      { "enemyId": 1001, "spawnTime": 6, "entryPointId": 1 },
+      { "enemyId": 1003, "spawnTime": 8, "entryPointId": 2 }
+    ]
+  },
+  {
+    "id": 102,
+    "mapConfig": {
+      "entryPoints": [
+        { "id": 1, "position": [0, 0], "name": "入口1" },
+        { "id": 2, "position": [0, 6], "name": "入口2" }
+      ],
+      "targetPoint": { "position": [12, 3], "name": "目标点" }
+    },
+    "spawns": [
+      { "enemyId": 1002, "spawnTime": 0, "entryPointId": 1 },
+      { "enemyId": 1002, "spawnTime": 1, "entryPointId": 1 },
+      { "enemyId": 1002, "spawnTime": 2, "entryPointId": 1 },
+      { "enemyId": 1002, "spawnTime": 4, "entryPointId": 2 },
+      { "enemyId": 1002, "spawnTime": 5, "entryPointId": 2 },
+      { "enemyId": 1003, "spawnTime": 10, "entryPointId": 1 }
+    ]
+  }
+] 

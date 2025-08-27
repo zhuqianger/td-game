@@ -13,7 +13,7 @@ namespace Operator
         private static bool _isInitialized = false;
         
         // 示例：初始化方法
-        public static void Initialize()
+        static OperatorNetwork()
         {
             if (!_isInitialized)
             {

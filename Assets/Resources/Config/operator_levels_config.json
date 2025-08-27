@@ -1,0 +1,1122 @@
+[
+  {
+    "id": 1001,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 1002,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 2,
+    "needExp": 100
+  },
+  {
+    "id": 1003,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 3,
+    "needExp": 200
+  },
+  {
+    "id": 1004,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 4,
+    "needExp": 350
+  },
+  {
+    "id": 1005,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 5,
+    "needExp": 500
+  },
+  {
+    "id": 1006,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 6,
+    "needExp": 700
+  },
+  {
+    "id": 1007,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 7,
+    "needExp": 900
+  },
+  {
+    "id": 1008,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 8,
+    "needExp": 1200
+  },
+  {
+    "id": 1009,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 9,
+    "needExp": 1500
+  },
+  {
+    "id": 1010,
+    "rarity": 1,
+    "eliteLevel": 0,
+    "level": 10,
+    "needExp": 2000
+  },
+  {
+    "id": 1101,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 1102,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 2,
+    "needExp": 150
+  },
+  {
+    "id": 1103,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 3,
+    "needExp": 300
+  },
+  {
+    "id": 1104,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 4,
+    "needExp": 500
+  },
+  {
+    "id": 1105,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 5,
+    "needExp": 750
+  },
+  {
+    "id": 1106,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 6,
+    "needExp": 1000
+  },
+  {
+    "id": 1107,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 7,
+    "needExp": 1300
+  },
+  {
+    "id": 1108,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 8,
+    "needExp": 1700
+  },
+  {
+    "id": 1109,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 9,
+    "needExp": 2200
+  },
+  {
+    "id": 1110,
+    "rarity": 1,
+    "eliteLevel": 1,
+    "level": 10,
+    "needExp": 2800
+  },
+  {
+    "id": 2001,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 2002,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 2,
+    "needExp": 150
+  },
+  {
+    "id": 2003,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 3,
+    "needExp": 300
+  },
+  {
+    "id": 2004,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 4,
+    "needExp": 500
+  },
+  {
+    "id": 2005,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 5,
+    "needExp": 750
+  },
+  {
+    "id": 2006,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 6,
+    "needExp": 1000
+  },
+  {
+    "id": 2007,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 7,
+    "needExp": 1300
+  },
+  {
+    "id": 2008,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 8,
+    "needExp": 1700
+  },
+  {
+    "id": 2009,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 9,
+    "needExp": 2200
+  },
+  {
+    "id": 2010,
+    "rarity": 2,
+    "eliteLevel": 0,
+    "level": 10,
+    "needExp": 2800
+  },
+  {
+    "id": 2101,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 2102,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 2,
+    "needExp": 200
+  },
+  {
+    "id": 2103,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 3,
+    "needExp": 400
+  },
+  {
+    "id": 2104,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 4,
+    "needExp": 650
+  },
+  {
+    "id": 2105,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 5,
+    "needExp": 950
+  },
+  {
+    "id": 2106,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 6,
+    "needExp": 1300
+  },
+  {
+    "id": 2107,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 7,
+    "needExp": 1700
+  },
+  {
+    "id": 2108,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 8,
+    "needExp": 2200
+  },
+  {
+    "id": 2109,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 9,
+    "needExp": 2800
+  },
+  {
+    "id": 2110,
+    "rarity": 2,
+    "eliteLevel": 1,
+    "level": 10,
+    "needExp": 3500
+  },
+  {
+    "id": 3001,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 3002,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 2,
+    "needExp": 200
+  },
+  {
+    "id": 3003,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 3,
+    "needExp": 400
+  },
+  {
+    "id": 3004,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 4,
+    "needExp": 650
+  },
+  {
+    "id": 3005,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 5,
+    "needExp": 950
+  },
+  {
+    "id": 3006,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 6,
+    "needExp": 1300
+  },
+  {
+    "id": 3007,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 7,
+    "needExp": 1700
+  },
+  {
+    "id": 3008,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 8,
+    "needExp": 2200
+  },
+  {
+    "id": 3009,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 9,
+    "needExp": 2800
+  },
+  {
+    "id": 3010,
+    "rarity": 3,
+    "eliteLevel": 0,
+    "level": 10,
+    "needExp": 3500
+  },
+  {
+    "id": 3101,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 3102,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 2,
+    "needExp": 250
+  },
+  {
+    "id": 3103,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 3,
+    "needExp": 500
+  },
+  {
+    "id": 3104,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 4,
+    "needExp": 800
+  },
+  {
+    "id": 3105,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 5,
+    "needExp": 1200
+  },
+  {
+    "id": 3106,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 6,
+    "needExp": 1600
+  },
+  {
+    "id": 3107,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 7,
+    "needExp": 2100
+  },
+  {
+    "id": 3108,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 8,
+    "needExp": 2700
+  },
+  {
+    "id": 3109,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 9,
+    "needExp": 3400
+  },
+  {
+    "id": 3110,
+    "rarity": 3,
+    "eliteLevel": 1,
+    "level": 10,
+    "needExp": 4200
+  },
+  {
+    "id": 3201,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 3202,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 2,
+    "needExp": 300
+  },
+  {
+    "id": 3203,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 3,
+    "needExp": 600
+  },
+  {
+    "id": 3204,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 4,
+    "needExp": 950
+  },
+  {
+    "id": 3205,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 5,
+    "needExp": 1400
+  },
+  {
+    "id": 3206,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 6,
+    "needExp": 1900
+  },
+  {
+    "id": 3207,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 7,
+    "needExp": 2500
+  },
+  {
+    "id": 3208,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 8,
+    "needExp": 3200
+  },
+  {
+    "id": 3209,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 9,
+    "needExp": 4000
+  },
+  {
+    "id": 3210,
+    "rarity": 3,
+    "eliteLevel": 2,
+    "level": 10,
+    "needExp": 5000
+  },
+  {
+    "id": 4001,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 4002,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 2,
+    "needExp": 250
+  },
+  {
+    "id": 4003,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 3,
+    "needExp": 500
+  },
+  {
+    "id": 4004,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 4,
+    "needExp": 800
+  },
+  {
+    "id": 4005,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 5,
+    "needExp": 1200
+  },
+  {
+    "id": 4006,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 6,
+    "needExp": 1600
+  },
+  {
+    "id": 4007,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 7,
+    "needExp": 2100
+  },
+  {
+    "id": 4008,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 8,
+    "needExp": 2700
+  },
+  {
+    "id": 4009,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 9,
+    "needExp": 3400
+  },
+  {
+    "id": 4010,
+    "rarity": 4,
+    "eliteLevel": 0,
+    "level": 10,
+    "needExp": 4200
+  },
+  {
+    "id": 4101,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 4102,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 2,
+    "needExp": 300
+  },
+  {
+    "id": 4103,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 3,
+    "needExp": 600
+  },
+  {
+    "id": 4104,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 4,
+    "needExp": 950
+  },
+  {
+    "id": 4105,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 5,
+    "needExp": 1400
+  },
+  {
+    "id": 4106,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 6,
+    "needExp": 1900
+  },
+  {
+    "id": 4107,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 7,
+    "needExp": 2500
+  },
+  {
+    "id": 4108,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 8,
+    "needExp": 3200
+  },
+  {
+    "id": 4109,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 9,
+    "needExp": 4000
+  },
+  {
+    "id": 4110,
+    "rarity": 4,
+    "eliteLevel": 1,
+    "level": 10,
+    "needExp": 5000
+  },
+  {
+    "id": 4201,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 4202,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 2,
+    "needExp": 400
+  },
+  {
+    "id": 4203,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 3,
+    "needExp": 800
+  },
+  {
+    "id": 4204,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 4,
+    "needExp": 1200
+  },
+  {
+    "id": 4205,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 5,
+    "needExp": 1700
+  },
+  {
+    "id": 4206,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 6,
+    "needExp": 2300
+  },
+  {
+    "id": 4207,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 7,
+    "needExp": 3000
+  },
+  {
+    "id": 4208,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 8,
+    "needExp": 3800
+  },
+  {
+    "id": 4209,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 9,
+    "needExp": 4700
+  },
+  {
+    "id": 4210,
+    "rarity": 4,
+    "eliteLevel": 2,
+    "level": 10,
+    "needExp": 6000
+  },
+  {
+    "id": 5001,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 5002,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 2,
+    "needExp": 300
+  },
+  {
+    "id": 5003,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 3,
+    "needExp": 600
+  },
+  {
+    "id": 5004,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 4,
+    "needExp": 950
+  },
+  {
+    "id": 5005,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 5,
+    "needExp": 1400
+  },
+  {
+    "id": 5006,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 6,
+    "needExp": 1900
+  },
+  {
+    "id": 5007,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 7,
+    "needExp": 2500
+  },
+  {
+    "id": 5008,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 8,
+    "needExp": 3200
+  },
+  {
+    "id": 5009,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 9,
+    "needExp": 4000
+  },
+  {
+    "id": 5010,
+    "rarity": 5,
+    "eliteLevel": 0,
+    "level": 10,
+    "needExp": 5000
+  },
+  {
+    "id": 5101,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 5102,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 2,
+    "needExp": 400
+  },
+  {
+    "id": 5103,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 3,
+    "needExp": 800
+  },
+  {
+    "id": 5104,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 4,
+    "needExp": 1200
+  },
+  {
+    "id": 5105,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 5,
+    "needExp": 1700
+  },
+  {
+    "id": 5106,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 6,
+    "needExp": 2300
+  },
+  {
+    "id": 5107,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 7,
+    "needExp": 3000
+  },
+  {
+    "id": 5108,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 8,
+    "needExp": 3800
+  },
+  {
+    "id": 5109,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 9,
+    "needExp": 4700
+  },
+  {
+    "id": 5110,
+    "rarity": 5,
+    "eliteLevel": 1,
+    "level": 10,
+    "needExp": 6000
+  },
+  {
+    "id": 5201,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 5202,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 2,
+    "needExp": 500
+  },
+  {
+    "id": 5203,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 3,
+    "needExp": 1000
+  },
+  {
+    "id": 5204,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 4,
+    "needExp": 1500
+  },
+  {
+    "id": 5205,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 5,
+    "needExp": 2100
+  },
+  {
+    "id": 5206,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 6,
+    "needExp": 2800
+  },
+  {
+    "id": 5207,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 7,
+    "needExp": 3600
+  },
+  {
+    "id": 5208,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 8,
+    "needExp": 4500
+  },
+  {
+    "id": 5209,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 9,
+    "needExp": 5500
+  },
+  {
+    "id": 5210,
+    "rarity": 5,
+    "eliteLevel": 2,
+    "level": 10,
+    "needExp": 7000
+  },
+  {
+    "id": 6001,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 6002,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 2,
+    "needExp": 400
+  },
+  {
+    "id": 6003,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 3,
+    "needExp": 800
+  },
+  {
+    "id": 6004,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 4,
+    "needExp": 1200
+  },
+  {
+    "id": 6005,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 5,
+    "needExp": 1700
+  },
+  {
+    "id": 6006,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 6,
+    "needExp": 2300
+  },
+  {
+    "id": 6007,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 7,
+    "needExp": 3000
+  },
+  {
+    "id": 6008,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 8,
+    "needExp": 3800
+  },
+  {
+    "id": 6009,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 9,
+    "needExp": 4700
+  },
+  {
+    "id": 6010,
+    "rarity": 6,
+    "eliteLevel": 0,
+    "level": 10,
+    "needExp": 6000
+  },
+  {
+    "id": 6101,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 6102,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 2,
+    "needExp": 500
+  },
+  {
+    "id": 6103,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 3,
+    "needExp": 1000
+  },
+  {
+    "id": 6104,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 4,
+    "needExp": 1500
+  },
+  {
+    "id": 6105,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 5,
+    "needExp": 2100
+  },
+  {
+    "id": 6106,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 6,
+    "needExp": 2800
+  },
+  {
+    "id": 6107,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 7,
+    "needExp": 3600
+  },
+  {
+    "id": 6108,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 8,
+    "needExp": 4500
+  },
+  {
+    "id": 6109,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 9,
+    "needExp": 5500
+  },
+  {
+    "id": 6110,
+    "rarity": 6,
+    "eliteLevel": 1,
+    "level": 10,
+    "needExp": 7000
+  },
+  {
+    "id": 6201,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 1,
+    "needExp": 0
+  },
+  {
+    "id": 6202,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 2,
+    "needExp": 600
+  },
+  {
+    "id": 6203,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 3,
+    "needExp": 1200
+  },
+  {
+    "id": 6204,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 4,
+    "needExp": 1800
+  },
+  {
+    "id": 6205,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 5,
+    "needExp": 2500
+  },
+  {
+    "id": 6206,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 6,
+    "needExp": 3300
+  },
+  {
+    "id": 6207,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 7,
+    "needExp": 4200
+  },
+  {
+    "id": 6208,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 8,
+    "needExp": 5200
+  },
+  {
+    "id": 6209,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 9,
+    "needExp": 6300
+  },
+  {
+    "id": 6210,
+    "rarity": 6,
+    "eliteLevel": 2,
+    "level": 10,
+    "needExp": 8000
+  }
+]

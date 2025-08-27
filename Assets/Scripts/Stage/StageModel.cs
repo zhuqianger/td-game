@@ -1,16 +1,34 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Common;
+using Config.Stage;
 
 namespace Stage
 {
     public static class StageModel
     {
-        public static List<Stage> stageList = new List<Stage>();
-        public static void OnStageListReceive(List<Stage> stageList)
+        public static Dictionary<int,Dictionary<int,Stage>> stageMap = new Dictionary<int,Dictionary<int,Stage>>();
+        //收到关卡数据
+        public static void OnStageDataReceive(List<Stage> stageList)
         {
-            StageModel.stageList = stageList;
+            stageMap.Clear();
+            List<StageConfig> configList = Config.ConfigManager.GetConfig<List<StageConfig>>("stage_config");
+            
+            
             EventManager.Send(EventType.OnStageDataReceive);
         }
+
+        
+        //关卡数据更新
+        public static void OnStageDataUpdate(Stage stage)
+        {
+            List<StageConfig> configList = Config.ConfigManager.GetConfig<List<StageConfig>>("stage_config");
+            
+            EventManager.Send(EventType.OnStageDataUpdate);
+        }
+        
+        
+        
+
     }
 }

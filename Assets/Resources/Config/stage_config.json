@@ -1,0 +1,23 @@
+[
+  {
+    "id": 101,
+    "stageName": "第一章 第一关",
+    "stageType": 1,
+    "difficulty": 1,
+    "chapter": 1
+  },
+  {
+    "id": 102,
+    "stageName": "第一章 第二关",
+    "stageType": 1,
+    "difficulty": 1,
+    "chapter": 1
+  },
+  {
+    "id": 201,
+    "stageName": "第二章 第一关",
+    "stageType": 1,
+    "difficulty": 1,
+    "chapter": 2
+  }
+] 

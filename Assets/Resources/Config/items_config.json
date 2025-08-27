@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1001,
+    "name": "经验卡",
+    "quality": 1,
+    "backpackTypeId": 1,
+    "description": "用于提升干员等级的基础经验道具"
+  },
+  {
+    "id": 1002,
+    "name": "高级经验卡",
+    "quality": 2,
+    "backpackTypeId": 1,
+    "description": "用于提升干员等级的高级经验道具"
+  },
+  {
+    "id": 2001,
+    "name": "技能芯片",
+    "quality": 2,
+    "backpackTypeId": 1,
+    "description": "用于提升干员技能等级的材料"
+  },
+  {
+    "id": 3001,
+    "name": "精英化材料",
+    "quality": 3,
+    "backpackTypeId": 1,
+    "description": "用于干员精英化的稀有材料"
+  },
+  {
+    "id": 4001,
+    "name": "龙门币",
+    "quality": 1,
+    "backpackTypeId": 2,
+    "description": "罗德岛的主要货币"
+  },
+  {
+    "id": 5001,
+    "name": "源石",
+    "quality": 4,
+    "backpackTypeId": 2,
+    "description": "珍贵的源石，可用于购买高级道具"
+  },
+  {
+    "id": 6001,
+    "name": "家具图纸",
+    "quality": 2,
+    "backpackTypeId": 3,
+    "description": "用于制作宿舍家具的图纸"
+  },
+  {
+    "id": 7001,
+    "name": "干员皮肤",
+    "quality": 3,
+    "backpackTypeId": 4,
+    "description": "干员的特殊外观皮肤"
+  },
+  {
+    "id": 8001,
+    "name": "体力药剂",
+    "quality": 1,
+    "backpackTypeId": 5,
+    "description": "恢复体力的消耗品"
+  },
+  {
+    "id": 9001,
+    "name": "招募券",
+    "quality": 3,
+    "backpackTypeId": 6,
+    "description": "用于招募干员的特殊券"
+  }
+]
