@@ -1,6 +1,6 @@
 [
   {
-    "enemyId": 1001,
+    "id": 1001,
     "enemyName": "普通敌人",
     "enemyType": 1,
     "hp": 500,
@@ -12,7 +12,7 @@
     "attackRange": [[0, 0], [1, 0]]
   },
   {
-    "enemyId": 1002,
+    "id": 1002,
     "enemyName": "精英敌人",
     "enemyType": 2,
     "hp": 1200,
@@ -24,7 +24,7 @@
     "attackRange": [[0, 0], [1, 0]]
   },
   {
-    "enemyId": 1003,
+    "id": 1003,
     "enemyName": "BOSS敌人",
     "enemyType": 3,
     "hp": 5000,

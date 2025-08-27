@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Common;
+using Config;
 using Config.Stage;
 
 namespace Stage
@@ -12,7 +13,6 @@ namespace Stage
         public static void OnStageDataReceive(List<Stage> stageList)
         {
             stageMap.Clear();
-            List<StageConfig> configList = Config.ConfigManager.GetConfig<List<StageConfig>>("stage_config");
             
             
             EventManager.Send(EventType.OnStageDataReceive);
@@ -22,7 +22,7 @@ namespace Stage
         //关卡数据更新
         public static void OnStageDataUpdate(Stage stage)
         {
-            List<StageConfig> configList = Config.ConfigManager.GetConfig<List<StageConfig>>("stage_config");
+            List<StageConfig> configList = ConfigManager.GetConfig<List<StageConfig>>("stage_config");
             
             EventManager.Send(EventType.OnStageDataUpdate);
         }

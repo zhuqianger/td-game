@@ -18,9 +18,9 @@ namespace Network
 
         [Header("Test Settings")]
         [SerializeField] private int testMessageId = 1;
-        [SerializeField] private string serverIp = "1.117.63.144";
+        [SerializeField] private string serverIp = "127.0.0.1";
         [SerializeField] private int serverPort = 8888;
-
+        
         private void Start()
         {
             // 初始化按钮监听
