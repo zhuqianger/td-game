@@ -3,6 +3,8 @@ using System;
 using System.Collections;
 using Network;
 using System.Collections.Generic;
+using System.Text;
+using Common;
 using Network.Entity;
 using Util;
 
@@ -10,10 +12,9 @@ namespace Operator
 {
     public static class OperatorNetwork
     {
-        private static bool _isInitialized = false;
-        
+        public static bool _isInitialized = false;
         // 示例：初始化方法
-        static OperatorNetwork()
+        public static void Init()
         {
             if (!_isInitialized)
             {
@@ -23,7 +24,6 @@ namespace Operator
                 _isInitialized = true;
             }
         }
-        
         // 注册消息处理器
         private static void RegisterMessageHandlers()
         {
@@ -41,6 +41,9 @@ namespace Operator
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received player operators: {json}");
             //处理收到玩家列表的逻辑
+            CommonResponse response = GameUtil.Deserialize<CommonResponse>(data);
+            List<Operator> operators = GameUtil.Deserialize<List<Operator>>(Encoding.UTF8.GetBytes(response.data.ToString()));
+            Debug.Log("123");
         }
         
         private static void HandleLevelUpOperator(byte[] data)

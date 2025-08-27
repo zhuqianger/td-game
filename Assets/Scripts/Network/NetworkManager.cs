@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Threading.Tasks; // Added for Task
+using System.Threading.Tasks;
+using Operator;
+using UnityEngine; // Added for Task
 
 namespace Network
 {
@@ -11,7 +13,12 @@ namespace Network
         
         // 消息处理字典
         private static Dictionary<int, Action<byte[]>> messageHandlers = new Dictionary<int, Action<byte[]>>();
-        
+
+        static NetworkManager()
+        {
+            OperatorNetwork.Init();
+        }
+
         // 初始化网络连接
         public static void Initialize()
         {

@@ -13,6 +13,7 @@ namespace Network
         [SerializeField] private Button disconnectButton;
         [SerializeField] private Button sendTestButton;
         [SerializeField] private InputField messageInput;
+        [SerializeField] private InputField messageIdInput;
         [SerializeField] private Text logText;
         [SerializeField] private Text connectionStatusText;
 
@@ -83,6 +84,7 @@ namespace Network
 
             try
             {
+                int messageId = messageIdInput != null ? int.Parse(messageIdInput.text): testMessageId;
                 string message = messageInput != null ? messageInput.text : "测试消息";
                 if (string.IsNullOrEmpty(message))
                 {
@@ -90,7 +92,7 @@ namespace Network
                 }
 
                 // 发送测试消息
-                GameClient.Instance.SendStringMessage(testMessageId, message);
+                GameClient.Instance.SendStringMessage(messageId, message);
                 AddLog($"发送消息: {message}");
             }
             catch (Exception e)

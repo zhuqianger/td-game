@@ -320,11 +320,23 @@ MonoBehaviour:
   disconnectButton: {fileID: 2002724469}
   sendTestButton: {fileID: 1872435486}
   messageInput: {fileID: 1087993268}
+  messageIdInput: {fileID: 1429817814}
   logText: {fileID: 1485448107}
   connectionStatusText: {fileID: 1749887973}
   testMessageId: 1
   serverIp: 127.0.0.1
   serverPort: 8888
+--- !u!114 &1429817814 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1945390553268327608, guid: a5bd6d99f5c14f241a2bff25938eb7a2, type: 3}
+  m_PrefabInstance: {fileID: 2625155102686552483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d199490a83bb2b844b9695cbf13b01ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1485448107 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5563733642368872249, guid: a5bd6d99f5c14f241a2bff25938eb7a2, type: 3}
