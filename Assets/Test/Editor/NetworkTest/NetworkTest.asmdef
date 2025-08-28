@@ -1,0 +1,6 @@
+{
+    "name": "NetworkTest",
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ]
+}
