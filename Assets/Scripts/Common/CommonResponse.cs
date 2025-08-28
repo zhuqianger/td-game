@@ -3,10 +3,10 @@
 namespace Common
 {
     [Serializable]
-    public class CommonResponse
+    public class CommonResponse<T>
     {
         public bool success;
         public string message;
-        public string data;
+        public T data;
     }
 }

@@ -41,9 +41,8 @@ namespace Operator
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received player operators: {json}");
             //处理收到玩家列表的逻辑
-            CommonResponse response = GameUtil.Deserialize<CommonResponse>(data);
-            List<Operator> operators = GameUtil.Deserialize<List<Operator>>(Encoding.UTF8.GetBytes(response.data.ToString()));
-            Debug.Log("123");
+            CommonResponse<List<Operator>> response = GameUtil.Deserialize<CommonResponse<List<Operator>>>(data);
+            OperatorModel.OnOperatorDataReceive(response.data);
         }
         
         private static void HandleLevelUpOperator(byte[] data)
@@ -51,6 +50,8 @@ namespace Operator
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received level up operator response: {json}");
             // 处理干员升级的逻辑
+            CommonResponse<Operator> response = GameUtil.Deserialize<CommonResponse<Operator>>(data);
+            OperatorModel.OnOperatorDataUpdate(response.data);
         }
         
         private static void HandleEliteOperator(byte[] data)
@@ -58,6 +59,8 @@ namespace Operator
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received elite operator response: {json}");
             // 处理干员精英化的逻辑
+            CommonResponse<Operator> response = GameUtil.Deserialize<CommonResponse<Operator>>(data);
+            OperatorModel.OnOperatorDataUpdate(response.data);
         }
         
         private static void HandleUpgradeSkill(byte[] data)
@@ -65,6 +68,8 @@ namespace Operator
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received upgrade skill response: {json}");
             // 处理技能升级的逻辑
+            CommonResponse<Operator> response = GameUtil.Deserialize<CommonResponse<Operator>>(data);
+            OperatorModel.OnOperatorDataUpdate(response.data);
         }
         
         private static void HandleMasterSkill(byte[] data)
@@ -72,10 +77,11 @@ namespace Operator
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received master skill response: {json}");
             // 处理技能专精的逻辑
+            CommonResponse<Operator> response = GameUtil.Deserialize<CommonResponse<Operator>>(data);
+            OperatorModel.OnOperatorDataUpdate(response.data);
         }
         
         // 以下是与干员相关的请求方法
-        
         public static void RequestGetPlayerOperators()
         {
             NetworkManager.SendJsonMessage((int)MessageId.REQ_GET_PLAYER_OPERATORS, null);
