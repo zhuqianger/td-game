@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System;
 using System.Collections.Generic;
+using Common;
 using Network;
 using Util;
 
@@ -35,8 +36,8 @@ namespace Stage
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received player stages: {json}");
             // 处理获取玩家关卡的逻辑
-            List<Stage> stageList = GameUtil.Deserialize<List<Stage>>(data);
-            StageModel.OnStageDataReceive(stageList);
+            CommonResponse<List<Stage>> response = GameUtil.Deserialize<CommonResponse<List<Stage>>>(data);
+            StageModel.OnStageDataReceive(response.data);
         }
 
         private static void HandleSaveStageRecord(byte[] data)
@@ -44,8 +45,8 @@ namespace Stage
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received save stage record response: {json}");
             // 处理保存关卡记录的逻辑
-            Stage stage = GameUtil.Deserialize<Stage>(data);
-            StageModel.OnStageDataUpdate(stage);
+            CommonResponse<Stage> response = GameUtil.Deserialize<CommonResponse<Stage>>(data);
+            StageModel.OnStageDataUpdate(response.data);
         }
         
         // 以下是与关卡相关的请求方法

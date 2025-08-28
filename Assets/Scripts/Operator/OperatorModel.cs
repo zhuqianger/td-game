@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Common;
 
 namespace Operator
 {
@@ -29,6 +30,8 @@ namespace Operator
             }
             
             Debug.Log($"Successfully stored {_operators.Count} operators in model");
+            
+            
         }
 
         public static void OnOperatorDataUpdate(Operator op)
