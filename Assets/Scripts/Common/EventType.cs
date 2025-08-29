@@ -9,6 +9,12 @@
         //干员
         public static readonly string OnOperatorDataReceive = "OnOperatorDataReceive";
         public static readonly string OnOperatorDataUpdate = "OnOperatorDataUpdate";
+        
+        //背包
+        public static readonly string OnBagItemDataReceive = "OnBagItemDataReceive";
+        public static readonly string OnBagItemDataUpdate = "OnBagItemDataUpdate";
+        
+        
 
 
     }

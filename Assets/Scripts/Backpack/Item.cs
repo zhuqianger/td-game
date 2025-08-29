@@ -1,5 +1,8 @@
-﻿namespace Backpack
+﻿using System;
+
+namespace Backpack
 {
+    [Serializable]
     public class Item
     {
         public int itemId;

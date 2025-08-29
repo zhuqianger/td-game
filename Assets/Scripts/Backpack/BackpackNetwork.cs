@@ -1,4 +1,8 @@
-﻿namespace Backpack
+﻿using System.Collections.Generic;
+using Common;
+using Operator;
+
+namespace Backpack
 {
     using UnityEngine;
     using System;
@@ -28,6 +32,7 @@
             NetworkManager.RegisterMessageHandler((int)MessageId.RESP_GET_BACKPACK, HandleGetBackpackItems);
             NetworkManager.RegisterMessageHandler((int)MessageId.RESP_USE_ITEM, HandleUseItem);
             NetworkManager.RegisterMessageHandler((int)MessageId.RESP_GET_BACKPACK_BY_TYPE, HandleGetBackpackByType);
+            NetworkManager.RegisterMessageHandler((int)MessageId.RESP_ITEMS_UPDATE,HandleItemsUpdate);
         }
 
         // 处理消息的单独回调方法
@@ -36,6 +41,8 @@
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received backpack items: {json}");
             // 处理获取背包物品的逻辑
+            CommonResponse<List<Item>> response = GameUtil.Deserialize<CommonResponse<List<Item>>>(data);
+            BackpackModel.OnItemListDataReceive(response.data);
         }
 
         private static void HandleAddItem(byte[] data)
@@ -56,6 +63,15 @@
             string json = System.Text.Encoding.UTF8.GetString(data);
             Debug.Log($"Received backpack items by type: {json}");
             // 处理按类型获取背包物品的逻辑
+        }
+
+        private static void HandleItemsUpdate(byte[] data)
+        {
+            string json = System.Text.Encoding.UTF8.GetString(data);
+            Debug.Log($"Received backpack items by type: {json}");
+            // 更新背包
+            CommonResponse<List<Item>> response = GameUtil.Deserialize<CommonResponse<List<Item>>>(data);
+            BackpackModel.OnItemListDataUpdate(response.data);
         }
 
         // 以下是与背包相关的请求方法

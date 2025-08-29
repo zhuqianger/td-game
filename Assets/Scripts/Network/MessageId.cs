@@ -45,6 +45,8 @@
         REQ_USE_ITEM = 66,
         RESP_USE_ITEM = 67,
         
+        RESP_ITEMS_UPDATE = 68,
+        
         // 关卡相关
         REQ_GET_PLAYER_STAGES = 82,
         RESP_GET_PLAYER_STAGES = 83,

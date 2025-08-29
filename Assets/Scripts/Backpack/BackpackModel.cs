@@ -1,64 +1,115 @@
-﻿namespace Backpack
-{
-    using System;
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using UnityEngine;
+using Config;
+using Config.Backpack;
+using Common;
+using EventType = Common.EventType;
 
+namespace Backpack
+{
     public static class BackpackModel
     {
-        // 背包物品数据模型
-        [Serializable]
-        public class ItemData
+        // 玩家背包数据：外层键为背包类型ID，内层键为物品ID，值为物品对象
+        private static Dictionary<int, Dictionary<int, Item>> itemMap = new Dictionary<int, Dictionary<int, Item>>();
+        
+        /// <summary>
+        /// 初始化背包模型
+        /// </summary>
+        public static void Init()
         {
-            public int id;
-            public string name;
-            public int quantity;
-            public string type; // 物品类型，例如 "material", "equipment", "consumable"
-            // 添加其他物品相关的字段
+            itemMap = new Dictionary<int, Dictionary<int, Item>>();
+            Debug.Log("BackpackModel initialized");
         }
         
-        // 玩家背包数据
-        private static List<ItemData> playerItems = new List<ItemData>();
-
-        // 获取玩家背包物品列表
-        public static List<ItemData> GetPlayerItems()
+        /// <summary>
+        /// 接收物品列表数据（通常是从服务器获取的完整背包数据）
+        /// </summary>
+        /// <param name="itemList">物品列表</param>
+        public static void OnItemListDataReceive(List<Item> itemList)
         {
-            return playerItems;
-        }
-
-        // 更新玩家背包物品列表
-        public static void UpdatePlayerItems(List<ItemData> items)
-        {
-            playerItems = items;
-        }
-
-        // 添加物品到背包
-        public static void AddItem(ItemData item)
-        {
-            var existingItem = playerItems.Find(i => i.id == item.id);
-            if (existingItem != null)
+            if (itemList == null || itemList.Count == 0)
             {
-                existingItem.quantity += item.quantity;
+                Debug.LogWarning("Received empty item list");
+                return;
             }
-            else
+            
+            // 清空现有数据
+            itemMap.Clear();
+            
+            // 遍历物品列表，按背包类型分组存储
+            foreach (var item in itemList)
             {
-                playerItems.Add(item);
-            }
-        }
-
-        // 从背包移除物品
-        public static bool RemoveItem(int itemId, int quantity)
-        {
-            var item = playerItems.Find(i => i.id == itemId);
-            if (item != null)
-            {
-                item.quantity -= quantity;
-                if (item.quantity <= 0)
+                if (item != null && item.itemId > 0)
                 {
-                    playerItems.Remove(item);
+                    // 获取物品配置信息
+                    ItemConfig itemConfig = ConfigManager.GetConfigById<ItemConfig>("items_config", item.itemId);
+                    if (itemConfig != null)
+                    {
+                        int backpackTypeId = itemConfig.backpackTypeId;
+                        
+                        // 如果背包类型不存在，创建新的背包字典
+                        if (!itemMap.ContainsKey(backpackTypeId))
+                        {
+                            itemMap[backpackTypeId] = new Dictionary<int, Item>();
+                        }
+                        
+                        // 将物品添加到对应背包类型
+                        itemMap[backpackTypeId][item.itemId] = item;
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Item config not found for item ID: {item.itemId}");
+                    }
                 }
-                return true;
             }
-            return false;
+            
+            Debug.Log($"Successfully stored {itemList.Count} items in {itemMap.Count} backpack types");
+            EventManager.Send(EventType.OnBagItemDataReceive);
+        }
+
+        /// <summary>
+        /// 更新物品列表数据（通常是部分物品的更新）
+        /// </summary>
+        /// <param name="itemList">更新的物品列表</param>
+        public static void OnItemListDataUpdate(List<Item> itemList)
+        {
+            if (itemList == null || itemList.Count == 0)
+            {
+                Debug.LogWarning("Received empty item update list");
+                return;
+            }
+            
+            Debug.Log($"Updating {itemList.Count} items in backpack");
+            
+            // 遍历更新的物品列表
+            foreach (var item in itemList)
+            {
+                if (item != null && item.itemId > 0)
+                {
+                    // 获取物品配置信息
+                    ItemConfig itemConfig = ConfigManager.GetConfigById<ItemConfig>("items_config", item.itemId);
+                    if (itemConfig != null)
+                    {
+                        int backpackTypeId = itemConfig.backpackTypeId;
+                        
+                        // 确保背包类型存在
+                        if (!itemMap.ContainsKey(backpackTypeId))
+                        {
+                            itemMap[backpackTypeId] = new Dictionary<int, Item>();
+                        }
+                        
+                        // 更新或添加物品数据
+                        itemMap[backpackTypeId][item.itemId] = item;
+                        
+                        Debug.Log($"Updated item {item.itemId} in backpack type {backpackTypeId} (Quantity: {item.quantity})");
+                    }
+                    else
+                    {
+                        Debug.LogWarning($"Item config not found for item ID: {item.itemId}");
+                    }
+                }
+            }
+            EventManager.Send(EventType.OnBagItemDataUpdate);
         }
     }
 }
