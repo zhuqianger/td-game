@@ -13,6 +13,12 @@ namespace Stage
     {
         public static Dictionary<int,Dictionary<int,Stage>> stageMap = new Dictionary<int,Dictionary<int,Stage>>();
         
+        
+        public static void Init()
+        {
+            stageMap = new Dictionary<int, Dictionary<int, Stage>>();
+        }
+        
         //收到关卡数据
         public static void OnStageDataReceive(List<Stage> stageList)
         {

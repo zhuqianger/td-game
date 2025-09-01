@@ -9,6 +9,12 @@ namespace Operator
     {
         // 干员数据存储，键为干员ID，值为干员对象
         private static Dictionary<int, Operator> _operators = new Dictionary<int, Operator>();
+
+        public static void Init()
+        {
+            _operators = new Dictionary<int, Operator>();
+        }
+
         public static void OnOperatorDataReceive(List<Operator> operatorList)
         {
             if (operatorList == null || operatorList.Count == 0)

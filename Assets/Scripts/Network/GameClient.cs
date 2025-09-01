@@ -46,6 +46,7 @@ namespace Network
                 return;
             }
             _instance = this;
+            
             DontDestroyOnLoad(gameObject);
         }
         #endregion

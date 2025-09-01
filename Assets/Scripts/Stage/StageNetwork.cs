@@ -11,7 +11,7 @@ namespace Stage
     {
         public static bool _isInitialized = false;
         
-        static StageNetwork()
+        public static void Init()
         {
             if (!_isInitialized)
             {

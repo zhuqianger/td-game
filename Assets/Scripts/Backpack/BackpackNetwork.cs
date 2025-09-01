@@ -14,7 +14,7 @@ namespace Backpack
         private static bool _isInitialized = false;
 
         // 初始化方法
-        public static void Initialize()
+        public static void Init()
         {
             if (!_isInitialized)
             {
