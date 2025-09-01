@@ -1,5 +1,8 @@
-﻿namespace Operator
+﻿using System;
+
+namespace Operator
 {
+    [Serializable]
     public class Operator
     {
         public int operatorId;

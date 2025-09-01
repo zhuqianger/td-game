@@ -1,5 +1,8 @@
-﻿namespace Stage
+﻿using System;
+
+namespace Stage
 {
+    [Serializable]
     public class Stage
     {
         public int stageId;
