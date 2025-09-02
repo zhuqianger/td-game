@@ -250,10 +250,10 @@ namespace Network
             return result;
         }
 
-        private void OnDestroy()
-        {
-            Disconnect();
-        }
+        // private void OnDestroy()
+        // {
+        //     Disconnect();
+        // }
 
         private void OnApplicationQuit()
         {
