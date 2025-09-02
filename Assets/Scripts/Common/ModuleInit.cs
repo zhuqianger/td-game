@@ -1,5 +1,6 @@
 ﻿using Backpack;
 using Operator;
+using Player;
 using Stage;
 
 namespace Common
@@ -14,16 +15,20 @@ namespace Common
 
         public static void ModelInit()
         {
+            PlayerModel.Init();
             BackpackModel.Init();
             OperatorModel.Init();
             StageModel.Init();
+            
         }
 
         public static void NetworkInit()
         {
+            PlayerNetwork.Init();
             BackpackNetwork.Init();
             OperatorNetwork.Init();
             StageNetwork.Init();
+            
         }
     }
 }

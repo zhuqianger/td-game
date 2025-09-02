@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Operator;
+using Player;
 using UnityEngine; // Added for Task
 
 namespace Network
@@ -17,6 +18,7 @@ namespace Network
         static NetworkManager()
         {
             OperatorNetwork.Init();
+            PlayerNetwork.Init();
         }
 
         // 初始化网络连接

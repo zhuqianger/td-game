@@ -134,7 +134,6 @@ namespace Network
                 }
                 catch (Exception e)
                 {
-                    Debug.LogError($"接收消息时发生错误: {e.Message}");
                     break;
                 }
             }
