@@ -52,7 +52,35 @@ namespace Operator
             _operators[op.operatorId] = op;
             
             Debug.Log($"Updated operator {op.operatorId} (Level: {op.level}, Elite: {op.eliteLevel})");
-            
+        }
+        
+        /// <summary>
+        /// 获取所有干员数据
+        /// </summary>
+        /// <returns>干员列表</returns>
+        public static List<Operator> GetAllOperators()
+        {
+            return new List<Operator>(_operators.Values);
+        }
+        
+        /// <summary>
+        /// 根据ID获取干员数据
+        /// </summary>
+        /// <param name="operatorId">干员ID</param>
+        /// <returns>干员数据</returns>
+        public static Operator GetOperator(int operatorId)
+        {
+            _operators.TryGetValue(operatorId, out Operator op);
+            return op;
+        }
+        
+        /// <summary>
+        /// 获取干员数量
+        /// </summary>
+        /// <returns>干员数量</returns>
+        public static int GetOperatorCount()
+        {
+            return _operators.Count;
         }
     }
 }
