@@ -10,6 +10,7 @@ namespace Common.UI
     /// </summary>
     public abstract class WndBase : UIBase
     {
-        
+        public UILayer layer = UILayer.Normal;
+        public string prefabAssetPath;
     }
 } 
