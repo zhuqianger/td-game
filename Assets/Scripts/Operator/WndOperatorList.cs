@@ -12,14 +12,20 @@ namespace Operator
     /// </summary>
     public class WndOperatorList:WndBase
     {
+        protected override void Init()
+        {
+            base.Init();
+            layer = UILayer.Normal;
+        }
+
         protected override void InitUI()
         {
-            throw new System.NotImplementedException();
+            
         }
         
-        protected override void Awake()
+        public override void Show()
         {
-            throw new System.NotImplementedException();
+            
         }
     }
 }

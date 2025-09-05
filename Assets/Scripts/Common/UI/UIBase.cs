@@ -8,14 +8,14 @@ namespace Common.UI
 {
     public abstract class UIBase : MonoBehaviour
     {
-        public bool isInitialized = false;
+        public bool isInit = false;
         public bool isVisible = false;
         
         #region 生命周期
         
         protected virtual void Awake()
         {
-            Initialize();
+            Init();
         }
         
         protected virtual void OnDestroy()
@@ -27,12 +27,12 @@ namespace Common.UI
         
         #region 初始化
         
-        protected virtual void Initialize()
+        protected virtual void Init()
         {
-            if (isInitialized) return;
+            if (isInit) return;
             
             InitUI();
-            isInitialized = true;
+            isInit = true;
         }
         
         protected virtual void InitUI()
@@ -45,9 +45,9 @@ namespace Common.UI
         #region 显示控制
         public virtual void Show()
         {
-            if (!isInitialized)
+            if (!isInit)
             {
-                Initialize();
+                Init();
             }
             
             gameObject.SetActive(true);
